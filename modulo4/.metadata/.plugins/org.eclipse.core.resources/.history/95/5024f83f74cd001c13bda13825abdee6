@@ -1,0 +1,22 @@
+package maquinaDeCafe;
+
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("-----------------------------");
+		System.out.println("1 - Expresso");
+		System.out.println("2 - Capuccino");
+		System.out.println("3 - Chocolate Quente");
+		System.out.println("-----------------------------");
+		
+		System.out.println("Digite a opção desejada!");
+		
+		input.close();
+
+	}
+
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\nsfma\Documents\UNISINOS\1º SEMESTRE\Programação I\modulo4\.metadata\.plugins\org.eclipse.jdt.core
+75931715.index
+2474180459.index
+1865797976.index
+437323661.index

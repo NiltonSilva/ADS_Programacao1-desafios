@@ -1,0 +1,81 @@
+package maquinaDeCafe;
+
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		int opcaoDoce;
+		boolean doce;
+		int opcao;
+		int notaInserida;
+		
+		System.out.println("-----------------------------");
+		System.out.println("1 - Expresso");
+		System.out.println("2 - Capuccino");
+		System.out.println("3 - Chocolate Quente");
+		System.out.println("-----------------------------");
+		System.out.print("Digite a opção desejada: ");
+		opcao = input.nextInt();
+		
+		switch(opcao) {
+			case 1:	
+				System.out.println("Digite 1-Adoçado / 0-Sem Açúcar");
+				opcaoDoce = input.nextInt();
+				if(opcaoDoce == 1) {
+					doce = true;
+				} else {
+					doce = false;
+				}
+				MaquinaDeCafe expresso = new MaquinaDeCafe(1, "Expresso", false, 2);
+				break;
+				
+			case 2:	
+				System.out.println("Digite 1-Adoçado / 0-Sem Açúcar");
+				if(opcaoDoce == 1) {
+					doce = true;
+				} else {
+					doce = false;
+				}
+				MaquinaDeCafe capuccino = new MaquinaDeCafe(2, "Expresso", false, 5);
+				break;
+				
+			case 3:	
+				System.out.println("Digite 1-Adoçado / 0-Sem Açúcar");
+				if(opcaoDoce == 1) {
+					doce = true;
+				} else {
+					doce = false;
+				}
+				MaquinaDeCafe chocolateQuente = new MaquinaDeCafe(3, "Expresso", false, 5);
+				break;
+			default:
+				System.out.println("Opcao inválida");
+		}
+		
+		do {
+			System.out.print("Insira a nota para pagamento: ");
+			notaInserida = input.nextInt();
+			if(notaInserida != 2 && notaInserida != 5) {
+				System.out.println("Nota inserida inválida");
+				System.out.println("Só são aceita notas notas de R$ 2,00 e R$ 5,00.");
+			}
+		} while(notaInserida != 2 && notaInserida != 5);
+		
+		switch(opcao) {
+			case 1:
+			if(expresso.getValor() == notaInserida) {
+					expresso.exibeDados();
+				}
+		}
+		
+		
+		
+		input.close();
+
+	}
+
+}

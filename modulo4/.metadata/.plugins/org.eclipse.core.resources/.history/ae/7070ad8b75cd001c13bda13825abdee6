@@ -1,0 +1,40 @@
+package maquinaDeCafe;
+
+import java.util.Scanner;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		int opcaoDoce = 0;
+		boolean doce;
+		int opcao;
+		
+		System.out.println("-----------------------------");
+		System.out.println("1 - Expresso");
+		System.out.println("2 - Capuccino");
+		System.out.println("3 - Chocolate Quente");
+		System.out.println("-----------------------------");
+		System.out.print("Digite a opção desejada: ");
+		opcao = input.nextInt();
+		
+		switch(opcao) {
+			case 1:	
+				System.out.println("Digite 1-Adoçado / 0-Sem Açúcar");
+				if(opcaoDoce == 1) {
+					doce = true;
+				} else {
+					doce = false;
+				}
+				MaquinaDeCafe expresso = new MaquinaDeCafe(1, "Expresso", false, 2);
+		}
+		
+		
+		
+		input.close();
+
+	}
+
+}
